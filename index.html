@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaime & Paula · Nuestra Boda</title>
+
+<!-- FUENTES -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<style>
+/* =====================
+   VARIABLES GLOBALES
+===================== */
+:root {
+  --cream: #faf8f3;
+  --sage: #e8c5a8;
+  --sage-dark: #d9a885;
+  --text: #5a5550;
+  --text-light: #8b8680;
+  --accent: #d4c5b0;
+  --blanco-roto: #FAF9F6;
+  --verde-oliva: #d9a885;
+  --sombra: rgba(0,0,0,0.08);
+  --paper: #ffffff;
+  --border: #ddd8ce;
+}
+
+/* =====================
+   RESET Y BASE
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background-color: var(--cream);
+  background-image: 
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.025) 2px, rgba(0,0,0,.025) 3px),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.025) 2px, rgba(0,0,0,.025) 3px),
+    radial-gradient(ellipse at 20% 30%, rgba(232,197,168,.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 70%, rgba(212,197,176,.18) 0%, transparent 40%);
+}
+
+/* =====================
+   SECCIONES
+===================== */
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--sage-dark);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   1. INVITACIÓN
+===================== */
+.invitation {
+  background: #f0f0e8;
+  background-image: url('https://i.imgur.com/2k821vJ.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Capa de overlay opcional para mejor legibilidad */
+.invitation::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 240, 232, 0.3);
+  pointer-events: none;
+}
+
+.wrapper {
+  width: 360px;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  position: relative;
+  width: 320px;
+  height: 220px;
+}
+
+.envelope-body {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f8f6f2 0%, #faf9f6 50%, #f5f3ef 100%);
+  box-shadow: 
+    0 15px 35px var(--sombra),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+  z-index: 1;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 2px;
+}
+
+/* Textura muy sutil de papel */
+.envelope-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0,0,0,0.015) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, rgba(0,0,0,0.012) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.01) 1px, transparent 1px);
+  background-size: 
+    60px 60px,
+    50px 50px,
+    70px 70px;
+  background-position: 0 0, 25px 25px, 40px 15px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Acabado mate suave */
+.envelope-body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(0,0,0,0.008) 100%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.envelope-inside {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.floral-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cg fill='%23d9a885'%3E%3Cpath d='M40 30c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100px;
+}
+
+.letter {
+  position: absolute;
+  bottom: -100%;
+  left: 5%;
+  width: 90%;
+  height: 65%;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  animation: slideLetter 8s infinite ease-in-out;
+  animation-delay: 3.2s;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  padding: 16px 12px 12px;
+}
+
+.letter strong {
+  font-size: 1.4rem;
+  color: var(--sage-dark);
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.letter small {
+  font-family: Cochin, 'Hoefler Text', Georgia, 'Times New Roman', serif;
+  font-size: 0.8rem;
+  color: var(--text);
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.pocket {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #ede9e5 0%, #f3f1ed 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 50%);
+  z-index: 3;
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.06);
+}
+
+/* Textura muy sutil de papel en el bolsillo */
+.pocket::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 25% 35%, rgba(0,0,0,0.015) 1px, transparent 1px),
+    radial-gradient(circle at 65% 65%, rgba(0,0,0,0.012) 1px, transparent 1px);
+  background-size: 
+    55px 55px,
+    50px 50px;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 50%);
+  pointer-events: none;
+}
+
+.flap {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #f3f1ed 0%, #f8f6f2 50%, #faf9f6 100%);
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transform-origin: top;
+  animation: openFlap 8s infinite ease-in-out;
+  animation-delay: 3.2s;
+  animation-delay: 3.5s;
+  z-index: 5;
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.1),
+    inset 0 -1px 2px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Textura muy sutil de papel en la solapa */
+.flap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0,0,0,0.015) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, rgba(0,0,0,0.012) 1px, transparent 1px);
+  background-size: 
+    60px 60px,
+    50px 50px;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  pointer-events: none;
+}
+
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  background: var(--verde-oliva);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  color: var(--blanco-roto);
+  font-family: 'Merriweather', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: sealOut 8s infinite ease-in-out;
+  animation-delay: 3.2s;
+}
+
+@keyframes openFlap {
+  0% { transform: rotateX(0deg); }
+  20%, 70% { transform: rotateX(180deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+@keyframes slideLetter {
+  0% { bottom: -100%; opacity: 0; }
+  25%, 75% { bottom: 30%; opacity: 1; }
+  100% { bottom: -100%; opacity: 0; }
+}
+
+@keyframes sealOut {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  15%, 80% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* =====================
+   CAMINANDO
+===================== */
+.walking {
+  padding: 80px 20px;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.video img {
+  display: none; /* reemplazado por .parallax-bg */
+}
+
+/* Para todos los dispositivos mantener contain */
+@media (max-width: 768px) {
+  .video img {
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video img {
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video img {
+    object-fit: contain;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+.text {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  animation: fadeText 2s forwards;
+  animation-delay: 3s;
+}
+
+
+.text h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+@keyframes fadeText {
+  to { opacity: 1; }
+}
+
+/* =====================
+   CUENTA ATRÁS
+===================== */
+.countdown-section {
+  background-image: url('https://i.imgur.com/oIQ2TCq.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Overlay opcional para mejorar la legibilidad */
+.countdown-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 248, 243, 0.3);
+  pointer-events: none;
+}
+
+.countdown {
+  text-align: center;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  margin: 0.5rem;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   2. LUGARES
+===================== */
+.places-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.places-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.place-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.place-column.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.place-column:hover {
+  box-shadow: 0 6px 30px rgba(232, 197, 168, 0.15);
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.icon-bg {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(168,181,160,0.15) 0%, rgba(168,181,160,0.05) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid rgba(168,181,160,0.2);
+  transition: all 0.4s ease;
+}
+
+.place-column:hover .icon-bg {
+  background: linear-gradient(135deg, rgba(168,181,160,0.25) 0%, rgba(168,181,160,0.1) 100%);
+  border-color: rgba(168,181,160,0.4);
+  transform: scale(1.05);
+}
+
+.icon-cross {
+  width: 50px;
+  height: 65px;
+  position: relative;
+}
+
+.icon-cross::before,
+.icon-cross::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, var(--sage) 0%, var(--sage-dark) 100%);
+  border-radius: 3px;
+}
+
+.icon-cross::before {
+  width: 10px;
+  height: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.icon-cross::after {
+  width: 45px;
+  height: 10px;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-venue {
+  width: 70px;
+  height: 60px;
+  position: relative;
+}
+
+.icon-venue-roof {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 25px solid var(--sage);
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+}
+
+.icon-venue-body {
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(180deg, var(--sage) 0%, var(--sage-dark) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  border-radius: 4px;
+}
+
+.icon-venue-door {
+  width: 16px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px 4px 0 0;
+}
+
+.places-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(168,181,160,0.3) 20%, 
+    rgba(168,181,160,0.5) 50%, 
+    rgba(168,181,160,0.3) 80%, 
+    transparent 100%);
+  position: relative;
+}
+
+.places-divider::before {
+  content: '❦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--sage);
+  font-size: 1.5rem;
+  background: var(--cream);
+  padding: 8px;
+}
+
+.place-type {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--sage-dark);
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.place-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.place-address {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.place-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.place-button {
+  padding: 14px 36px;
+  border: 1.5px solid var(--sage);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  color: var(--sage-dark);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.place-button:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 197, 168, 0.3);
+}
+
+.place-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 300;
+}
+
+.place-time strong {
+  font-weight: 500;
+  color: var(--sage-dark);
+  font-size: 1.2rem;
+}
+
+/* =====================
+   3. TRANSPORTE
+===================== */
+.transport-section {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+
+.info-card:hover {}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--sage-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.parking-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.parking-button {
+  padding: 14px 36px;
+  border: 1.5px solid var(--sage);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: var(--sage-dark);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  background: transparent;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.parking-button:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 197, 168, 0.3);
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+.form-question {
+  margin-bottom: 25px;
+}
+
+.question-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1.5px solid rgba(232, 197, 168, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.radio-option:hover {
+  border-color: var(--sage);
+  background: rgba(232, 197, 168, 0.05);
+}
+
+.radio-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: var(--sage);
+}
+
+.radio-option label {
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+  flex: 1;
+  font-weight: 300;
+}
+
+.radio-option.selected {
+  border-color: var(--sage);
+  background: rgba(232, 197, 168, 0.1);
+}
+
+.people-input-container {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(232, 197, 168, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(232, 197, 168, 0.2);
+}
+
+.people-input-container.show {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-label {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.text-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(232, 197, 168, 0.3);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(232, 197, 168, 0.1);
+}
+
+.submit-button {
+  margin-top: 30px;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: white;
+  background: var(--sage);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 197, 168, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: rgba(232, 197, 168, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+  color: var(--sage-dark);
+  font-size: 1.1rem;
+}
+
+.success-message.show {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* =====================
+   4. HOTELES
+===================== */
+.hotels-section {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.city-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+
+.city-card:hover { transform: translateY(-3px); }
+
+.city-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--sage-dark);
+  text-align: center;
+  margin-bottom: 25px;
+  text-decoration: underline;
+  text-decoration-color: var(--sage);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.hotels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hotel-button {
+  padding: 14px 24px;
+  border: 1.5px solid var(--sage);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: var(--sage-dark);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  background: transparent;
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hotel-button:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(232, 197, 168, 0.3);
+}
+
+/* =====================
+   5. FORMULARIO RSVP
+===================== */
+.rsvp-section {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+form, #closing-screen {
+  max-width: 420px;
+  margin: auto;
+  background: var(--paper);
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: none;
+  position: relative;
+}
+
+
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.field {
+  margin-top: 22px;
+  opacity: 0;
+  transform: translateY(10px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.field.visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 600px;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+.icon {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+  color: var(--sage);
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--sage);
+  background: #fff;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background: var(--sage);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.form-hide {
+  animation: fadeOutDown 0.6s ease forwards;
+}
+
+@keyframes fadeOutDown {
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+#closing-screen {
+  display: none;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signature {
+  margin-top: 25px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--sage);
+}
+
+/* =====================
+   GALERÍA DE FOTOS
+===================== */
+.gallery-section {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-image-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   SUBE TUS FOTOS
+===================== */
+.upload-section {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.upload-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 50px 40px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.upload-card:hover { transform: translateY(-2px); }
+
+.upload-icon {
+  font-size: 4rem;
+  color: var(--sage);
+  margin-bottom: 20px;
+}
+
+.upload-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: var(--sage);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.upload-button:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 197, 168, 0.4);
+}
+
+/* =====================
+   6. CONTACTO
+===================== */
+.contact-section {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 50px 40px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+
+.contact-card:hover {}
+
+.contacts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-item {
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--sage-dark);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.contact-phone {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  color: var(--text);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.contact-phone a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.contact-phone a:hover {
+  color: var(--sage-dark);
+  background: rgba(232, 197, 168, 0.1);
+  transform: scale(1.05);
+}
+
+.divider {
+  width: 1px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(168,181,160,0.3) 20%, 
+    rgba(168,181,160,0.5) 50%, 
+    rgba(168,181,160,0.3) 80%, 
+    transparent 100%);
+  position: relative;
+}
+
+.divider::before {
+  content: '❦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--sage);
+  font-size: 1.2rem;
+  background: rgba(250, 248, 243, 0.9);
+  padding: 8px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .places-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .places-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .hotels-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .contacts-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .place-column {
+    padding: 30px 20px;
+  }
+  
+  .info-card {
+    padding: 30px 20px;
+  }
+  
+  .contact-card {
+    padding: 40px 25px;
+  }
+  
+  .contact-name {
+    white-space: normal;
+  }
+  
+  .parking-button {
+    width: 100%;
+  }
+  
+  .upload-card {
+    padding: 40px 25px;
+  }
+  
+  .upload-icon {
+    font-size: 3rem;
+  }
+  
+  .gallery-image-container {
+    border-radius: 8px;
+  }
+}
+
+
+/* =====================
+   LOADER
+===================== */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--cream);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loaderFadeOut 0.8s ease 2.8s forwards;
+  pointer-events: none;
+}
+
+.loader-inner {
+  text-align: center;
+}
+
+.loader-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--sage-dark);
+  letter-spacing: 8px;
+  line-height: 1;
+  animation: loaderMonogram 2.8s ease forwards;
+}
+
+.loader-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  color: var(--text-light);
+  margin-top: 12px;
+  opacity: 0;
+  animation: loaderFadeIn 0.6s ease 0.6s forwards;
+}
+
+.loader-line {
+  width: 0;
+  height: 1px;
+  background: var(--sage);
+  margin: 20px auto 0;
+  animation: loaderLine 1.2s ease 0.3s forwards;
+}
+
+@keyframes loaderMonogram {
+  0%   { opacity: 0; transform: scale(0.8); }
+  30%  { opacity: 1; transform: scale(1); }
+  80%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+@keyframes loaderFadeIn  { to { opacity: 1; } }
+@keyframes loaderLine    { to { width: 120px; } }
+@keyframes loaderFadeOut { to { opacity: 0; visibility: hidden; } }
+
+/* =====================
+   PÉTALOS
+===================== */
+#petals-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  width: 12px;
+  height: 16px;
+  background: radial-gradient(ellipse at 40% 30%, rgba(255,220,200,0.95), rgba(217,168,133,0.6));
+  border-radius: 50% 10% 50% 10%;
+  animation: petalFall linear infinite;
+  opacity: 0;
+}
+
+@keyframes petalFall {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg) rotateY(0deg); opacity: 0; }
+  5%   { opacity: 0.8; }
+  50%  { transform: translateX(calc(var(--drift) * 0.5)) translateY(50vh) rotate(360deg) rotateY(90deg); }
+  85%  { opacity: 0.6; }
+  100% { transform: translateX(var(--drift)) translateY(115vh) rotate(720deg) rotateY(180deg); opacity: 0; }
+}
+
+/* =====================
+   PARALLAX (ahora como galería)
+===================== */
+.parallax-bg {
+  width: 100%;
+  padding-top: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: auto;
+}
+
+/* =====================
+   CUENTA ATRÁS PREMIUM
+===================== */
+.countdown-wrapper {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-pretitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--sage-dark);
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.countdown-units {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.flip-card {
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(250,248,243,0.4), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flip-card::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 8%; right: 8%;
+  height: 1px;
+  background: rgba(0,0,0,0.06);
+  z-index: 2;
+}
+
+.flip-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: var(--sage-dark);
+  line-height: 1;
+  letter-spacing: -1px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.flip-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  font-weight: 700;
+}
+
+.countdown-separator {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--sage);
+  line-height: 1;
+  margin-bottom: 34px;
+  opacity: 0.6;
+}
+
+.countdown-divider-line {
+  width: 60px;
+  height: 1px;
+  background: var(--sage);
+  margin: 50px auto 24px;
+  opacity: 0.5;
+}
+
+.countdown-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--sage-dark);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .flip-card { width: 85px; height: 85px; }
+  .flip-number { font-size: 2.8rem; }
+  .countdown-units { gap: 10px; }
+  .countdown-separator { font-size: 1.8rem; margin-bottom: 22px; }
+}
+
+
+  
+  .card-title {
+    font-size: 1.7rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <div class="loader-monogram">J&P</div>
+    <div class="loader-date">20 · 06 · 2026</div>
+    <div class="loader-line"></div>
+  </div>
+</div>
+
+<!-- PÉTALOS -->
+<div id="petals-container"></div>
+
+<!-- =====================
+   1. INVITACIÓN
+===================== -->
+<section class="section invitation">
+  <div class="wrapper">
+    <div class="envelope">
+      <div class="envelope-body">
+        <div class="floral-bg"></div>
+      </div>
+      <div class="envelope-inside">
+        <div class="letter">
+          <strong>Jaime & Paula</strong>
+          <small>20 · 06 · 2026</small>
+        </div>
+      </div>
+      <div class="pocket"></div>
+      <div class="flap"></div>
+      <div class="wax-seal">J&P</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMINANDO -->
+<section class="section walking">
+  <div class="video">
+    <div style="position:relative; width:100%; border-radius:12px; overflow:hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+      <img src="https://i.imgur.com/31jAg4O.jpeg" alt="Jaime y Paula" style="width:100%; height:auto; display:block;">
+      <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 50%); border-radius:12px;"></div>
+      <div class="text" style="position:absolute; top:8%; left:0; right:0; margin-top:0; color:white; opacity:1; animation:none;">
+        <h1>¡Qué nos casamos!</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUENTA ATRÁS -->
+<section class="section countdown-section">
+  <div class="countdown-wrapper">
+    <p class="countdown-pretitle">Os esperamos en</p>
+    <div class="countdown-units">
+      <div class="countdown-unit">
+        <div class="flip-card">
+          <span class="flip-number" id="days">00</span>
+        </div>
+        <span class="flip-label">Días</span>
+      </div>
+      <div class="countdown-separator">·</div>
+      <div class="countdown-unit">
+        <div class="flip-card">
+          <span class="flip-number" id="hours">00</span>
+        </div>
+        <span class="flip-label">Horas</span>
+      </div>
+      <div class="countdown-separator">·</div>
+      <div class="countdown-unit">
+        <div class="flip-card">
+          <span class="flip-number" id="minutes">00</span>
+        </div>
+        <span class="flip-label">Minutos</span>
+      </div>
+  </div>
+</section>
+
+<!-- =====================
+   2. LUGARES
+===================== -->
+<section class="section">
+  <div class="places-section">
+    <h2 class="section-title">Dónde celebramos</h2>
+    
+    <div class="places-wrapper">
+      <!-- CEREMONIA -->
+      <div class="place-column">
+        <div class="icon-container">
+          <div class="icon-bg">
+            <div class="icon-cross"></div>
+          </div>
+        </div>
+        
+        <h3 class="place-type">Ceremonia</h3>
+        <h4 class="place-name">Iglesia de San Marcos</h4>
+        
+        <p class="place-time"><strong>11:45</strong></p>
+        
+        <p class="place-address">Jerez de la Frontera</p>
+        
+        <div class="place-footer">
+          <a class="place-button"
+             href="https://www.google.com/maps/search/?api=1&query=Iglesia+de+San+Marcos+Jerez+de+la+Frontera"
+             target="_blank">Ver en Google Maps</a>
+        </div>
+      </div>
+      
+      <div class="places-divider"></div>
+      
+      <!-- CELEBRACIÓN -->
+      <div class="place-column">
+        <div class="icon-container">
+          <div class="icon-bg">
+            <div class="icon-venue">
+              <div class="icon-venue-roof"></div>
+              <div class="icon-venue-body">
+                <div class="icon-venue-door"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="place-type">Celebración</h3>
+        <h4 class="place-name">Finca El Maestre</h4>
+        
+        <p class="place-time"><strong>14:30</strong></p>
+        
+        <p class="place-address">Sanlúcar de Barrameda</p>
+        
+        <div class="place-footer">
+          <a class="place-button"
+             href="https://www.google.com/maps/search/?api=1&query=Finca+El+Maestre+Sanlúcar+de+Barrameda"
+             target="_blank">Ver en Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   3. TRANSPORTE
+===================== -->
+<section class="section">
+  <div class="transport-section">
+    <h2 class="section-title">Parking y Transporte</h2>
+    
+    <!-- PARKING -->
+    <div class="info-card">
+      <h3 class="card-title">Parking</h3>
+      
+      <p class="card-text">
+        En caso de que vaya a venir en coche a la iglesia, los alrededores son zona de estacionamiento regulado. Los parkings más cercanos son:
+      </p>
+      
+      <div class="parking-buttons">
+        <a href="https://www.google.com/maps/search/?api=1&query=Parking+plaza+del+Mamelón+Jerez" 
+           target="_blank" 
+           class="parking-button">
+          Parking Plaza del Mamelón
+        </a>
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=Interparking+Jerez+Centro" 
+           target="_blank" 
+           class="parking-button">
+          Interparking Jerez Centro
+        </a>
+      </div>
+      
+      <p class="card-text" style="margin-top: 25px;">
+        Dentro de la finca hay parking para todos los vehículos.
+      </p>
+    </div>
+    
+    <!-- TRANSPORTE -->
+    <div class="info-card">
+      <h3 class="card-title">Transporte</h3>
+      
+      <p class="card-text">
+        Contaremos con un servicio de autobuses a la salida de la Iglesia para llegar a la finca, y al finalizar la celebración, para las personas que necesiten volver a Jerez de la Frontera.
+      </p>
+      
+      
+      <p class="card-text" style="margin-top: 30px; font-weight: 400;">
+        Para poder organizarlo, necesitamos saber si querrás hacer uso de él, por lo que necesitamos que nos contestes a las siguientes preguntas, por favor.
+      </p>
+      
+      <!-- FORMULARIO TRANSPORTE -->
+      <form class="form-container" id="transportForm">
+        <div class="form-question">
+          <p class="question-text">¿Necesitas servicio de transporte?</p>
+          
+          <div class="radio-group">
+            <div class="radio-option" id="option-yes">
+              <input type="radio" id="transport-yes" name="transport" value="yes">
+              <label for="transport-yes">Sí, necesito servicio de transporte</label>
+            </div>
+            
+            <div class="radio-option" id="option-no">
+              <input type="radio" id="transport-no" name="transport" value="no">
+              <label for="transport-no">No, no necesito transporte</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="people-input-container" id="peopleContainer">
+          <label for="people-names" class="input-label">
+            Por favor, indica el nombre de las personas que necesitan transporte:
+          </label>
+          <input 
+            type="text" 
+            id="people-names" 
+            class="text-input" 
+            placeholder="Ej: María García, Juan Pérez">
+        </div>
+        
+        <button type="submit" class="submit-button" id="submitBtn" disabled>
+          Enviar respuesta
+        </button>
+        
+        <div class="success-message" id="successMessage">
+          ¡Gracias! Tu respuesta ha sido registrada.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   4. HOTELES
+===================== -->
+<section class="section">
+  <div class="hotels-section">
+    <h2 class="section-title">Alojamiento</h2>
+    
+    <p class="intro-text">
+      Para los asistentes que necesiten alojamiento, hemos preparado una lista de hoteles recomendados cerca de los lugares donde tendrán lugar la ceremonia o la celebración.
+    </p>
+    
+    <div class="hotels-grid">
+      <!-- JEREZ DE LA FRONTERA -->
+      <div class="city-card">
+        <h3 class="city-name">Jerez de la Frontera</h3>
+        
+        <div class="hotels-list">
+          <a href="https://www.booking.com/hotel/es/nhavenidajerez.es.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4ApLW8csGwAIB0gIkNjc4MDY0NTAtMTczYy00ZWI0LThhMWYtYzk1NjAyNDNiMTFm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=90760&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1769761566&srpvid=b72a3b4deb3f0530&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            NH Avenida de Jerez
+          </a>
+          
+          <a href="https://www.booking.com/hotel/es/hotel-jerez-centro-barcelo.es.html?aid=356980&label=gog235jc-10CAsoRkIaaG90ZWwtamVyZXotY2VudHJvLWJhcmNlbG9IClgDaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4Apq1y80GwAIB0gIkMmQ0MTE4NTItNGZmMS00NWJmLThkMTQtYzY3MjFiNzQyZDVm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=-386204&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1773329301&srpvid=54b46c80fa680208&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            Hotel Jerez Centro
+          </a>
+          
+          <a href="https://www.booking.com/hotel/es/sherry-park.es.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4ApLW8csGwAIB0gIkNjc4MDY0NTAtMTczYy00ZWI0LThhMWYtYzk1NjAyNDNiMTFm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=90760&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=2&hpos=2&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1769764762&srpvid=b72a3b4deb3f0530&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            Hotel Sherry Park
+          </a>
+        </div>
+      </div>
+      
+      <!-- SANLÚCAR DE BARRAMEDA -->
+      <div class="city-card">
+        <h3 class="city-name">Sanlúcar de Barrameda</h3>
+        
+        <div class="hotels-list">
+          <a href="https://www.booking.com/hotel/es/cisnes-palace.es.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4ApLW8csGwAIB0gIkNjc4MDY0NTAtMTczYy00ZWI0LThhMWYtYzk1NjAyNDNiMTFm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=8354900&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1769764799&srpvid=d7cd419d272b01cb&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            Cisnes Palace
+          </a>
+          
+          <a href="https://www.booking.com/hotel/es/eurostars-palacio-marques-de-arizon.es.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4ApLW8csGwAIB0gIkNjc4MDY0NTAtMTczYy00ZWI0LThhMWYtYzk1NjAyNDNiMTFm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=312440&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1769764846&srpvid=ce3f41b592150611&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            Hotel Marqués de Arizón
+          </a>
+          
+          <a href="https://www.booking.com/hotel/es/parnterdonana.es.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4ApLW8csGwAIB0gIkNjc4MDY0NTAtMTczYy00ZWI0LThhMWYtYzk1NjAyNDNiMTFm2AIB4AIB&sid=d2d4c2052f14a309b175a3473b46aa9f&dest_id=312440&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=5&hpos=5&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1769764873&srpvid=ce3f41b592150611&type=total&ucfs=1&" 
+             target="_blank" 
+             class="hotel-button">
+            Hotel Maciá Doñana
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   5. FORMULARIO RSVP
+===================== -->
+<section class="section">
+  <div class="rsvp-section">
+    <form id="rsvp-form">
+      <h2>Confirmación de asistencia</h2>
+      <p class="intro">
+        ¡Nos haría muchísima ilusión contar contigo en este día tan especial y feliz para nosotros!
+      </p>
+
+      <div class="field visible">
+        <label><span class="material-symbols-outlined icon">person</span>Nombre y Apellidos</label>
+        <input type="text" name="nombre" required>
+      </div>
+
+      <div class="field visible">
+        <label><span class="material-symbols-outlined icon">event</span>¿Podrás asistir a nuestra boda?</label>
+        <select name="asistencia" id="asistencia" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, podré asistir">Sí, podré asistir</option>
+          <option value="No, no podré asistir">No, no podré asistir</option>
+        </select>
+      </div>
+
+      <div class="field" id="solo-section">
+        <label><span class="material-symbols-outlined icon">groups</span>¿Asistirás solo?</label>
+        <select name="asisteSolo" id="asisteSolo">
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, asistiré solo">Sí, asistiré solo</option>
+          <option value="No, asistiré acompañado">No, asistiré acompañado</option>
+        </select>
+      </div>
+
+      <div class="field" id="acompanantes-section">
+        <label><span class="material-symbols-outlined icon">group_add</span>Número de acompañantes</label>
+        <input type="number" name="numAcompanantes" min="1">
+        <label style="margin-top:12px;">Nombres y apellidos de los acompañantes</label>
+        <textarea name="nombresAcompanantes"></textarea>
+      </div>
+
+      <div class="field" id="intolerancias-question">
+        <label><span class="material-symbols-outlined icon">restaurant</span>¿Tienes alguna intolerancia alimenticia?</label>
+        <select id="tieneIntolerancias">
+          <option value="">Selecciona una opción</option>
+          <option value="No">No, no tengo intolerancias</option>
+          <option value="Sí">Sí, tengo intolerancias</option>
+        </select>
+      </div>
+
+      <div class="field" id="intolerancias-detail">
+        <label>Indícanos cuáles, por favor</label>
+        <textarea name="intolerancias"></textarea>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="closing-screen">
+      <h2>Gracias por tu respuesta</h2>
+      <p>Nos hace muchísima ilusión compartir este día contigo</p>
+      <p class="signature">Jaime & Paula<br>20 de junio de 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   GALERÍA DE FOTOS
+===================== -->
+<section class="section">
+  <div class="gallery-section">
+    <h2 class="section-title">Nuestros recuerdos</h2>
+    
+    <p class="intro-text">
+      Así éramos antes de conocernos
+    </p>
+    
+    <div class="gallery-image-container">
+      <img src="https://i.imgur.com/lmiaAit.jpeg" alt="Jaime y Paula de pequeños">
+    </div>
+    
+    <p class="intro-text" style="margin-top: 60px; margin-bottom: 30px;">
+      Y estos somos nosotros ahora
+    </p>
+    
+    <div class="gallery-image-container">
+      <img src="https://i.imgur.com/qe4Bn4v.png" alt="Jaime y Paula ahora">
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   SUBE TUS FOTOS
+===================== -->
+<section class="section">
+  <div class="upload-section">
+    <h2 class="section-title">Comparte tus fotos</h2>
+    
+    <div class="upload-card">
+      <div class="upload-icon">📸</div>
+      
+      <p class="upload-description">
+        Nos encantaría que compartieras con nosotros las fotos que hagas durante la celebración.<br>
+        Sube tus mejores momentos a nuestra carpeta compartida.
+      </p>
+      
+      <a href="https://drive.google.com/drive/folders/1kSOxo1zGdFRPOxSiBFIGMFxkaKG0dy8b?usp=share_link" 
+         target="_blank" 
+         class="upload-button">
+        Subir fotos
+      </a>
+      
+      <p class="upload-description" style="margin-top: 20px; font-size: 0.9rem; color: var(--text-light);">
+        
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   6. CONTACTO
+===================== -->
+<section class="section">
+  <div class="contact-section">
+    <h2 class="section-title">Contacto</h2>
+    
+    <p class="intro-text">
+      En caso de que tengas cualquier duda, estos son nuestros números de teléfono:
+    </p>
+    
+    <div class="contact-card">
+      <div class="contacts-wrapper">
+        <!-- JAIME -->
+        <div class="contact-item">
+          <h3 class="contact-name">Jaime Fernández Martín</h3>
+          <p class="contact-phone">
+            <a href="tel:+34636456524">636 456 524</a>
+          </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- PAULA -->
+        <div class="contact-item">
+          <h3 class="contact-name">Paula Gargallo Cobos</h3>
+          <p class="contact-phone">
+            <a href="tel:+34617050891">617 050 891</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+   SCRIPTS
+===================== -->
+<script>
+// =====================
+// CUENTA ATRÁS PREMIUM
+// =====================
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function updateCountdown() {
+  const target = new Date("2026-06-20T00:00:00");
+  const diff = target - new Date();
+  if (diff <= 0) {
+    ['days','hours','minutes'].forEach(id => document.getElementById(id).textContent = '00');
+    return;
+  }
+  const vals = {
+    days:    Math.floor(diff / 86400000),
+    hours:   Math.floor(diff / 3600000) % 24,
+    minutes: Math.floor(diff / 60000) % 60
+  };
+  Object.entries(vals).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    const padded = pad(val);
+    if (el.textContent !== padded) {
+      el.style.transform = 'translateY(-6px)';
+      el.style.opacity   = '0';
+      setTimeout(() => {
+        el.textContent     = padded;
+        el.style.transform = 'translateY(0)';
+        el.style.opacity   = '1';
+      }, 150);
+    }
+  });
+}
+updateCountdown();
+setInterval(updateCountdown, 10000);
+
+// =====================
+// PÉTALOS
+// =====================
+(function() {
+  const container = document.getElementById('petals-container');
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    const size  = 8 + Math.random() * 10;
+    const drift = (Math.random() - 0.5) * 80;
+    p.style.cssText = `
+      left: ${Math.random() * 100}%;
+      width: ${size}px;
+      height: ${size * 1.3}px;
+      animation-duration: ${7 + Math.random() * 9}s;
+      animation-delay: ${Math.random() * 14}s;
+      --drift: ${drift}px;
+      border-radius: ${Math.random() > 0.5 ? '50% 10% 50% 10%' : '10% 50% 10% 50%'};
+    `;
+    container.appendChild(p);
+  }
+})();
+
+// Parallax desactivado - sección ahora usa imagen estática
+
+
+// =====================
+// ANIMACIÓN LUGARES
+// =====================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.place-column').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.2}s`;
+  observer.observe(el);
+});
+
+// =====================
+// FORMULARIO TRANSPORTE
+// =====================
+const radioYes       = document.getElementById('transport-yes');
+const radioNo        = document.getElementById('transport-no');
+const optionYes      = document.getElementById('option-yes');
+const optionNo       = document.getElementById('option-no');
+const peopleContainer = document.getElementById('peopleContainer');
+const peopleInput    = document.getElementById('people-names');
+const submitBtn      = document.getElementById('submitBtn');
+const successMessage = document.getElementById('successMessage');
+
+radioYes.addEventListener('change', function() {
+  if (this.checked) {
+    peopleContainer.classList.add('show');
+    optionYes.classList.add('selected');
+    optionNo.classList.remove('selected');
+    submitBtn.disabled = false;
+  }
+});
+
+radioNo.addEventListener('change', function() {
+  if (this.checked) {
+    peopleContainer.classList.remove('show');
+    peopleInput.value = '';
+    optionNo.classList.add('selected');
+    optionYes.classList.remove('selected');
+    submitBtn.disabled = false;
+  }
+});
+
+optionYes.addEventListener('click', () => { radioYes.checked = true; radioYes.dispatchEvent(new Event('change')); });
+optionNo.addEventListener('click',  () => { radioNo.checked  = true; radioNo.dispatchEvent(new Event('change')); });
+
+document.getElementById('transportForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando...';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxwZ4yoeu73p8zWfGHe8n3_r9FnVl0LodOA7hwp7rSC_lpUGOaw_K1OUWo3UrVYPvaF/exec';
+  try {
+    await fetch(scriptURL, { method: 'POST', body: JSON.stringify({ needsTransport: radioYes.checked, peopleNames: radioYes.checked ? peopleInput.value.trim() : 'N/A' }) });
+    successMessage.textContent = '¡Gracias! Tu respuesta ha sido registrada.';
+    successMessage.classList.add('show');
+    submitBtn.textContent = 'Enviar respuesta';
+    setTimeout(() => {
+      this.reset();
+      peopleContainer.classList.remove('show');
+      optionYes.classList.remove('selected');
+      optionNo.classList.remove('selected');
+      successMessage.classList.remove('show');
+      submitBtn.disabled = true;
+    }, 3000);
+  } catch {
+    successMessage.textContent = 'Hubo un error. Por favor, inténtalo de nuevo.';
+    successMessage.classList.add('show');
+    submitBtn.textContent = 'Enviar respuesta';
+    submitBtn.disabled = false;
+    setTimeout(() => successMessage.classList.remove('show'), 3000);
+  }
+});
+
+// =====================
+// FORMULARIO RSVP
+// =====================
+const asistencia          = document.getElementById("asistencia");
+const soloSection         = document.getElementById("solo-section");
+const asisteSolo          = document.getElementById("asisteSolo");
+const acompanantesSection = document.getElementById("acompanantes-section");
+const intoleranciasQuestion = document.getElementById("intolerancias-question");
+const intoleranciasDetail = document.getElementById("intolerancias-detail");
+const tieneIntolerancias  = document.getElementById("tieneIntolerancias");
+
+asistencia.addEventListener("change", () => {
+  if (asistencia.value.includes("Sí")) {
+    soloSection.classList.add("visible");
+  } else {
+    [soloSection, acompanantesSection, intoleranciasQuestion, intoleranciasDetail].forEach(el => el.classList.remove("visible"));
+  }
+});
+
+asisteSolo.addEventListener("change", () => {
+  if (asisteSolo.value.includes("acompañado")) {
+    acompanantesSection.classList.add("visible");
+  } else {
+    acompanantesSection.classList.remove("visible");
+  }
+  intoleranciasQuestion.classList.add("visible");
+});
+
+tieneIntolerancias.addEventListener("change", () => {
+  if (tieneIntolerancias.value === "Sí") {
+    intoleranciasDetail.classList.add("visible");
+  } else {
+    intoleranciasDetail.classList.remove("visible");
+  }
+});
+
+document.getElementById("rsvp-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this).entries());
+  fetch("https://script.google.com/macros/s/AKfycbzrVb8lfDCa7p6n1oSUTJQ-kGoN3Xp-Mugvyxv8Qpb3WSigYM9iyOXoCBkjdhjGcmqj/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  }).then(() => {
+    this.classList.add("form-hide");
+    setTimeout(() => {
+      this.style.display = "none";
+      document.getElementById("closing-screen").style.display = "block";
+    }, 600);
+  });
+});
+</script>
+
+</body>
+</html>
